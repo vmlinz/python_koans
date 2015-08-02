@@ -18,6 +18,12 @@
 #
 def triangle(a, b, c):
     # DELETE 'PASS' AND WRITE THIS CODE
+    # Check parameters
+    if not (a > 0 and b > 0 and c > 0):
+    	raise TriangleError
+    if (a + b < c) or (a + c < b) or (b + c < a):
+        raise TriangleError
+    # Return triangle types 
     if a == b and a == c:
     	return 'equilateral'
     elif a != b and a != c and b != c:
